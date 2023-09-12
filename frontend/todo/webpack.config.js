@@ -30,12 +30,26 @@ module.exports = {
 				type: 'asset/resource',
 			},
 			{
-				test: /\.svg$/,
-				type: 'asset/resource',
+				test: /\.svg$/i,
+				issuer: /\.[jt]sx?$/,
+				use: {
+					loader: "@svgr/webpack",
+					options: {
+						typescript: true,
+						ext: "tsx",
+					}
+				},
 				generator: {
 					filename: path.join('icons', '[name].[contenthash][ext]'),
 				},
 			},
+			 {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
 		],
 	},
 	resolve: {
