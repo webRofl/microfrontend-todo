@@ -12,8 +12,10 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx}' --config ./.prettierrc"
   },
   "dependencies": {
+    "antd": "^5.9.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.22.17",

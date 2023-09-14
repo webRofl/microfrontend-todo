@@ -60,11 +60,13 @@ module.exports = {
 			name: 'core',
 			filename: 'core.js',
 			exposes: {
-				'./Button': path.join(__dirname, 'src', 'components', 'atoms', 'Button', 'Button'),
+				'./SearchInput': path.join(__dirname, 'src', 'components', 'atoms', 'SearchInput', 'SearchInput'),
 			},
 			shared: {
 				react: { singleton: true },
 				'react-dom': { singleton: true },
+				antd: { singleton: true },
+				'styled-components': { singleton: true },
 			},
 		}),
 	],
