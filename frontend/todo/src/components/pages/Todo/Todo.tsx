@@ -1,13 +1,13 @@
 import { Sidebar, TodoList } from '@/components/organisms';
+import { TodoTemplate } from '@/components/templates';
 import React from 'react';
-import * as SC from './style';
 
 const Todo = () => {
   return (
-    <SC.Container>
+    <TodoTemplate>
       <Sidebar />
       <TodoList />
-    </SC.Container>
+    </TodoTemplate>
   );
 };
 

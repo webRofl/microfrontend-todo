@@ -1,1 +1,7 @@
-export { default as Button } from './Button/Button';
+import SearchInput from './SearchInput/SearchInput';
+
+class AtomsComponents {
+  SearchInput = SearchInput;
+}
+
+export default new AtomsComponents();

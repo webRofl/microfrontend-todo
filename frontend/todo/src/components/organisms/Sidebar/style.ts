@@ -2,37 +2,15 @@ import styled from 'styled-components';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import SearchIcon from '@/assets/icons/search.svg';
-import { Button, Divider, Input } from 'antd';
+import { Button, Divider } from 'antd';
 
 export const Container = styled.aside`
   width: 25vw;
   height: 100vh;
-  border-right: 1px solid silver;
+  border-right: 2px solid #353536;
   padding: 1rem;
   background-color: #212122;
   position: relative;
-`;
-
-export const SearchInput = styled(Input)`
-  height: 2.8rem;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  background-color: #353536;
-  box-shadow: none;
-  font-size: 1.5rem;
-  color: #bcbcbc;
-
-  svg {
-    fill: #e1e1e2;
-  }
-
-  input {
-    background: #353536;
-    color: #bcbcbc;
-    margin-left: 0.3rem;
-  }
 `;
 
 export const SearchPrefix = styled(SearchIcon)`

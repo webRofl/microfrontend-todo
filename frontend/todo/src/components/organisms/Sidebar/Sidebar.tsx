@@ -1,6 +1,10 @@
 import { TaskQuantityFromKeys } from '@/components/molecules';
 import React from 'react';
 import * as SC from './style';
+import { SharedComponentHandler } from '@/hocs';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+const SearchInput = React.lazy(async () => await import('core/SearchInput'));
 
 const mockDataForDays: Record<string, number> = {
   today: 1,
@@ -19,7 +23,9 @@ const mockDataForHobbies: Record<string, number> = {
 const Sidebar = () => {
   return (
     <SC.Container>
-      <SC.SearchInput prefix={<SC.SearchPrefix />} placeholder="Search" />
+      <SharedComponentHandler>
+        <SearchInput prefix={<SC.SearchPrefix />} placeholder="Search" />
+      </SharedComponentHandler>
       <TaskQuantityFromKeys data={mockDataForDays} />
       <SC.CustomDivider />
       <TaskQuantityFromKeys data={mockDataForHobbies} />
